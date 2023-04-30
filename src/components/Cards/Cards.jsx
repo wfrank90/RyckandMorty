@@ -3,7 +3,7 @@ import Card from "../Card/Card";
 import styles from "./Cards.module.css";
 
 export default function Cards(props) {
-  const { characters } = props;
+  const { characters, onClose } = props;
 
   return (
     <div className={styles.mainDiv}>
@@ -11,13 +11,14 @@ export default function Cards(props) {
         return (
           <Card
             key={char.id}
+            id={char.id}
             name={char.name}
             status={char.status}
             species={char.species}
             gender={char.gender}
             origin={char.origin.name}
             image={char.image}
-            onClose={() => window.alert("Emular cierre de terjeta")}
+            onClose={onClose}
           />
         );
       })}
