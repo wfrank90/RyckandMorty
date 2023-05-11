@@ -5,7 +5,7 @@ export const addFav = (character) => {
       payload: character
     };
   };
-  
+
   // Action creator removeFav
   export const removeFav = (id) => {
     return {
@@ -14,3 +14,18 @@ export const addFav = (character) => {
     };
   };
   
+  //Action  creator filterCards
+  export const filterCards = (gender) => {
+    return {
+      type: "FILTER",
+      payload: gender
+    }
+  }
+
+  //Action cretor orderCards
+  export const orderCards = (orden) => {
+    return {
+      type: "ORDER",
+      payload: orden
+    }
+  }
