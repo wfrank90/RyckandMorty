@@ -8,8 +8,6 @@ import About from './components/About/About';
 import Detail from './components/Detail/Detail';
 import Form from './components/Form/form';
 import Favorites from './components/Favorites/Favorites';
-
-
 const EMAIL = 'login@mail.com';
 const PASSWORD = 'milogin123';
 //Ruta al componente favorites
@@ -45,7 +43,7 @@ function App() {
           window.alert('¡No hay personajes con este ID!');
         }
       })
-      .catch((error) => window.alert('Error'));
+      .catch((err) => alert(err.response.data))
   };
 
   const onClose = (id) => {
