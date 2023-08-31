@@ -1,7 +1,7 @@
 const { DataTypes } = require("sequelize")
 
 module.exports = (sequelize) => {
-    sequelize.define("Character", {
+    sequelize.define("User", {
         id: {
             type: DataTypes.INTEGER,
             allowNNull: false,
@@ -18,5 +18,6 @@ module.exports = (sequelize) => {
             type: DataTypes.STRING,
             allowNNull: false,
         }
-    })
+    },
+    { timestamps: false })
 }
